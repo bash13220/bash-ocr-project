@@ -1,0 +1,53 @@
+.tableau{
+font-family:Arial, Helvetica, sans-serif;
+background-color:#000000;
+}
+
+.titre_tableau{
+font-family:Arial, Helvetica, sans-serif;
+background-color:#FFC040;
+color:#000000;
+text-align:center;
+font-weight: bold;
+}
+
+.explicatif_tableau{
+font-family:Arial, Helvetica, sans-serif;
+background-color:#000000;
+color:#FFC040;
+text-align:left;
+font-size:8pt;
+font-style:italic;
+}
+
+.titre_ecran{
+font-family:Arial, Helvetica, sans-serif;
+color:#FFFFFF;
+text-align:center;
+font-size:16pt;
+}
+
+.select_fichier{
+font-family:Arial, Helvetica, sans-serif;
+background-color:#000000;
+color:#FFFFFF;
+text-align:left;
+font-size:8pt;
+}
+
+.texte_standard{
+font-family:Arial, Helvetica, sans-serif;
+background-color:#000000;
+color:#FFFFFF;
+text-align:left;
+font-size:8pt;
+}
+
+.resultat_param{
+font-family:Arial, Helvetica, sans-serif;
+background-color:#000000;
+color:#FFFFFF;
+text-align:left;
+font-size:10pt;
+font-weight:bold;
+}
