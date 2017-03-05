@@ -2,7 +2,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 <LINK rel="stylesheet" type="text/css" href="style.css">
-<title>Import des donn&eacute;es</title>
+<title>Modification de fichier db</title>
 </head>
 
 <body bgcolor="#000000" style="font-family:Arial, Helvetica, sans-serif;color:#FFFFFF">
@@ -12,25 +12,23 @@ $NB_FICHIER = 34;
 // Mode de communication : 1-FILAIRE / 2-AERIENNE (SYNCHRO FILAIRE PARAM) / 3-AERIENNE / 4-AERIENNE AVEC POINTAGE AUTO (SYNCHRO FILAIRE PARAM) / 5-AERIENNE AVEC POINTAGE AUTO
 $MODE_COM=3;
 // url du serveur soap de communication sous la forme http://127.0.0.1/webservices
-$URL="https://franconville.kiosquefamille.fr/web_services";
+$URL="https://127.0.0.1/web_services";
 // HTACCESS - Nom de l'utilisateur
 $HTA_USER="";
 // HTACCESS - Mot de passe associé à l'utilisateur
 $HTA_PWD="";
 
 // Nom du fichier db qui sera généré
-$NOM_FICHIER="technocarte_tab";
+$NOM_FICHIER="destination";
 // Nom du fichier db qui sera utilisé comme modèle
-$source = "technocarte.db";
+$source = "modele.db";
 
 // N° à partir duquel démarre la génération
 $boucle = 1;
 
 while ($boucle <= $NB_FICHIER) {
 
-	$destination='franconville/'.$NOM_FICHIER . $boucle.'.db';
-
-	//copy($source, $destination); 
+	$destination='exemple/'.$NOM_FICHIER . $boucle.'.db';
 
 	$db = new PDO('sqlite:'.$destination);
 	$db->query("UPDATE CONFIG SET CODEPDA=" . $boucle.", MODE=" . $MODE_COM . ", URL_SOAP='" . $URL . "', HTACCESS_USER='" . $HTA_USER . "', HTACCESS_PWD='" . $HTA_PWD . "'");
